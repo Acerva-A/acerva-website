@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import ReactFlagsSelect from "react-flags-select";
-import "react-flags-select/css/react-flags-select.css";
 
 type FormState = {
   firstName: string;
