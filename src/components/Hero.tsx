@@ -42,12 +42,17 @@ export default function Hero() {
           </a>
         </div>
 
-        <div className="mt-24 flex flex-col items-center gap-2" style={{ color: "var(--text-tertiary)" }}>
+        <button
+          onClick={() => window.scrollBy({ top: 400, behavior: "smooth" })}
+          className="mt-24 flex flex-col items-center gap-2 cursor-pointer transition-colors duration-200 hover:opacity-70"
+          style={{ color: "var(--text-tertiary)" }}
+          aria-label="Scroll down"
+        >
           <span className="text-xs tracking-widest uppercase">Scroll</span>
           <svg className="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>
-        </div>
+        </button>
       </div>
     </section>
   );

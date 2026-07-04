@@ -177,6 +177,10 @@ html.retro header nav a {
   font-size: 12px !important;
 }
 
+html.retro header button[aria-label="Toggle menu"] {
+  display: none !important;
+}
+
 html.retro header button {
   display: block !important;
 }
