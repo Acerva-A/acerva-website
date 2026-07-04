@@ -177,8 +177,8 @@ html.retro header nav a {
   font-size: 12px !important;
 }
 
-html.retro header button:not(.md\\:hidden) {
-  display: none !important;
+html.retro header button {
+  display: block !important;
 }
 
 html.retro header div[class*="gap-4"] {
