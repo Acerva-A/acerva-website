@@ -102,10 +102,10 @@ export default function ThemeToggle() {
           fontFamily: "inherit",
           fontSize: "13px",
         }}
-        aria-label="Toggle retro mode"
-        title={isRetro ? "Switch to modern" : "Switch to 90's"}
+        aria-label={isRetro ? "Back to modern" : "Try 90's mode"}
+        title={isRetro ? "Back to modern" : "Try 90's mode"}
       >
-        [retro]
+        {isRetro ? "back to modern" : "[retro]"}
       </button>
     </div>
   );
