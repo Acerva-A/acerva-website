@@ -181,12 +181,21 @@ html.retro header button:not(.md\\:hidden) {
   display: none !important;
 }
 
-html.retro header > div:last-of-type,
-html.retro header > div:has(> div:last-child) {
+html.retro header div[class*="gap-4"] {
   display: flex !important;
   flex-direction: column !important;
   gap: 4px !important;
-  order: 0 !important;
+  width: 100% !important;
+}
+
+html.retro header a[href="#contact"] {
+  display: block !important;
+  padding: 4px 0 !important;
+  color: #0000ff !important;
+  text-decoration: underline !important;
+  font-size: 12px !important;
+  background: none !important;
+  border: none !important;
 }
 
 html.retro main {
