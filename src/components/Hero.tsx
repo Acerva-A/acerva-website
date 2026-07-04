@@ -31,7 +31,7 @@ export default function Hero() {
             className="font-medium px-8 py-3.5 rounded-lg transition-colors duration-200 text-base"
             style={{ backgroundColor: "var(--accent)", color: "#1b3a2b" }}
           >
-            Start a project
+            Let's build
           </a>
           <a
             href="#work"

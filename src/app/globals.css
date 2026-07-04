@@ -217,6 +217,34 @@ html.retro button[aria-label="Back to modern"]:hover {
   opacity: 0.8 !important;
 }
 
+html.retro button[aria-label="Back to modern"] {
+  position: relative !important;
+}
+
+html.retro button[aria-label="Back to modern"]::before {
+  content: "" !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  border: 1px solid var(--accent) !important;
+  transform: translate(-50%, -50%) !important;
+  animation: retroFocusPulse 0.8s ease-in-out 1.5s forwards !important;
+  pointer-events: none !important;
+}
+
+@keyframes retroFocusPulse {
+  0% {
+    width: 200px;
+    height: 100px;
+    opacity: 1;
+  }
+  100% {
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    opacity: 0;
+  }
+}
+
 /* Retro button looks retro in modern mode - just hyperlink style */
 button[aria-label="Try 90's mode"] {
   background: none !important;

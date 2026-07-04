@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import ReactFlagsSelect from "react-flags-select";
+import "react-flags-select/css/react-flags-select.css";
 
 type FormState = {
   firstName: string;
@@ -171,7 +172,7 @@ export default function Contact() {
                     <label className="block text-xs mb-1.5" style={{ color: "var(--text-secondary)" }}>
                       Country
                     </label>
-                    <div style={{ backgroundColor: "var(--bg-secondary)", border: "1px solid var(--border)", borderRadius: "0.5rem", overflow: "hidden" }}>
+                    <div style={{ position: "relative", zIndex: 10 }}>
                       <ReactFlagsSelect
                         selected={form.country}
                         onSelect={(code) => setForm(f => ({ ...f, country: code }))}
