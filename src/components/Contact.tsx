@@ -61,10 +61,10 @@ export default function Contact() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
             <p className="text-xs font-medium uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>
-              Let's talk
+              Get in touch
             </p>
             <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-5" style={{ color: "var(--text-primary)" }}>
-              Ready to build your foundation?
+              Let's build something together
             </h2>
             <p className="text-sm leading-relaxed mb-10" style={{ color: "var(--text-secondary)" }}>
               Tell us what you're working on, what's in the way, or what you need to build. We'll get back within one business day.
@@ -167,6 +167,19 @@ export default function Contact() {
                   />
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <div>
+                    <label className="block text-xs mb-1.5" style={{ color: "var(--text-secondary)" }}>
+                      Country
+                    </label>
+                    <div style={{ backgroundColor: "var(--bg-secondary)", border: "1px solid var(--border)", borderRadius: "0.5rem", overflow: "hidden" }}>
+                      <ReactFlagsSelect
+                        selected={form.country}
+                        onSelect={(code) => setForm(f => ({ ...f, country: code }))}
+                        searchable
+                        showSelectedLabel={false}
+                      />
+                    </div>
+                  </div>
                   <div className="sm:col-span-2">
                     <label className="block text-xs mb-1.5" style={{ color: "var(--text-secondary)" }}>
                       Phone
@@ -186,20 +199,6 @@ export default function Contact() {
                         fontSize: "0.875rem",
                       }}
                     />
-                  </div>
-                  <div>
-                    <label className="block text-xs mb-1.5" style={{ color: "var(--text-secondary)" }}>
-                      Country
-                    </label>
-                    <div style={{ backgroundColor: "var(--bg-secondary)", border: "1px solid var(--border)", borderRadius: "0.5rem", overflow: "hidden" }}>
-                      <ReactFlagsSelect
-                        selected={form.country}
-                        onSelect={(code) => setForm(f => ({ ...f, country: code }))}
-                        searchable={false}
-                        showSelectedLabel={false}
-                        customLabels={{ AU: "Australia" }}
-                      />
-                    </div>
                   </div>
                 </div>
                 <div>
