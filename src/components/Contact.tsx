@@ -1,10 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import ReactFlagsSelect from "react-flags-select";
 
 type FormState = {
-  name: string;
+  firstName: string;
+  lastName: string;
   email: string;
+  phone: string;
+  country: string;
   company: string;
   message: string;
 };
@@ -13,8 +17,11 @@ type Status = "idle" | "sending" | "sent" | "error";
 
 export default function Contact() {
   const [form, setForm] = useState<FormState>({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
+    phone: "",
+    country: "AU",
     company: "",
     message: "",
   });
@@ -27,8 +34,25 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
-    await new Promise((r) => setTimeout(r, 900));
-    setStatus("sent");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (!response.ok) {
+        setStatus("error");
+        return;
+      }
+
+      setStatus("sent");
+      setForm({ firstName: "", lastName: "", email: "", phone: "", country: "AU", company: "", message: "" });
+    } catch (err) {
+      console.error(err);
+      setStatus("error");
+    }
   };
 
   return (
@@ -80,14 +104,14 @@ export default function Contact() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs mb-1.5" style={{ color: "var(--text-secondary)" }}>
-                      Name *
+                      First name *
                     </label>
                     <input
                       type="text"
                       required
-                      value={form.name}
-                      onChange={set("name")}
-                      placeholder="Your name"
+                      value={form.firstName}
+                      onChange={set("firstName")}
+                      placeholder="John"
                       style={{
                         width: "100%",
                         backgroundColor: "var(--bg-secondary)",
@@ -101,14 +125,14 @@ export default function Contact() {
                   </div>
                   <div>
                     <label className="block text-xs mb-1.5" style={{ color: "var(--text-secondary)" }}>
-                      Email *
+                      Last name *
                     </label>
                     <input
-                      type="email"
+                      type="text"
                       required
-                      value={form.email}
-                      onChange={set("email")}
-                      placeholder="you@company.com"
+                      value={form.lastName}
+                      onChange={set("lastName")}
+                      placeholder="Doe"
                       style={{
                         width: "100%",
                         backgroundColor: "var(--bg-secondary)",
@@ -119,6 +143,63 @@ export default function Contact() {
                         fontSize: "0.875rem",
                       }}
                     />
+                  </div>
+                </div>
+                <div>
+                  <label className="block text-xs mb-1.5" style={{ color: "var(--text-secondary)" }}>
+                    Email *
+                  </label>
+                  <input
+                    type="email"
+                    required
+                    value={form.email}
+                    onChange={set("email")}
+                    placeholder="you@company.com"
+                    style={{
+                      width: "100%",
+                      backgroundColor: "var(--bg-secondary)",
+                      border: "1px solid var(--border)",
+                      color: "var(--text-primary)",
+                      borderRadius: "0.5rem",
+                      padding: "0.75rem",
+                      fontSize: "0.875rem",
+                    }}
+                  />
+                </div>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <div className="sm:col-span-2">
+                    <label className="block text-xs mb-1.5" style={{ color: "var(--text-secondary)" }}>
+                      Phone
+                    </label>
+                    <input
+                      type="tel"
+                      value={form.phone}
+                      onChange={set("phone")}
+                      placeholder="0412 345 678 (optional)"
+                      style={{
+                        width: "100%",
+                        backgroundColor: "var(--bg-secondary)",
+                        border: "1px solid var(--border)",
+                        color: "var(--text-primary)",
+                        borderRadius: "0.5rem",
+                        padding: "0.75rem",
+                        fontSize: "0.875rem",
+                      }}
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs mb-1.5" style={{ color: "var(--text-secondary)" }}>
+                      Country
+                    </label>
+                    <div style={{ backgroundColor: "var(--bg-secondary)", border: "1px solid var(--border)", borderRadius: "0.5rem", overflow: "hidden" }}>
+                      <ReactFlagsSelect
+                        selected={form.country}
+                        onSelect={(code) => setForm(f => ({ ...f, country: code }))}
+                        searchable={false}
+                        showSelectedLabel={false}
+                        customLabels={{ AU: "Australia" }}
+                      />
+                    </div>
                   </div>
                 </div>
                 <div>
