@@ -123,17 +123,44 @@ html.retro p {
 }
 
 /* 90's Sidebar Layout */
-html.retro body {
+html.retro {
   display: flex !important;
   flex-direction: row !important;
-  gap: 0 !important;
+}
+
+html.retro body {
+  display: contents;
+}
+
+html.retro .retro-sidebar {
+  display: block !important;
+  width: 160px;
+  border-right: 1px solid #808080;
+  padding: 8px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 13px;
+  order: -1;
+  flex-shrink: 0;
+}
+
+html.retro .retro-sidebar div {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+html.retro .retro-sidebar a {
+  display: block;
+  padding: 4px 0;
+  color: #0000ff;
+  text-decoration: underline;
+  font-size: 12px;
 }
 
 html.retro main {
-  display: flex;
-  flex-direction: column;
   flex: 1;
-  max-width: 100%;
+  min-width: 0;
 }
 
 html.retro section {
@@ -142,21 +169,27 @@ html.retro section {
   margin: 4px !important;
 }
 
-html.retro .retro-sidebar {
-  display: block !important;
-  width: 150px;
-  border-right: 1px solid #808080;
-  padding: 4px;
-  min-height: 100vh;
-  flex-shrink: 0;
+html.retro section {
+  min-height: auto !important;
 }
 
-html.retro .retro-sidebar a {
-  display: block;
-  padding: 2px 0;
-  color: #0000ff;
-  text-decoration: underline;
-  font-size: 12px;
+html.retro section:first-of-type {
+  padding: 8px !important;
+}
+
+html.retro h1 {
+  font-size: 16px !important;
+}
+
+html.retro .mt-24 {
+  margin-top: 2px !important;
+}
+
+html.retro footer {
+  width: 100%;
+  border-top: 1px solid #808080;
+  padding: 4px !important;
+  margin: 0 !important;
 }
 
 /* Blog-style cards */

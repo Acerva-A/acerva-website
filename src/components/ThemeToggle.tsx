@@ -102,12 +102,13 @@ export default function ThemeToggle() {
           textDecoration: "underline",
           padding: 0,
           cursor: "pointer",
-          fontFamily: "Times New Roman, serif",
+          fontFamily: "inherit",
           fontSize: "13px",
         }}
-        aria-label="Toggle modern/90s mode"
+        aria-label="Toggle retro mode"
+        title={isRetro ? "Switch to modern" : "Switch to 90's"}
       >
-        [{isRetro ? "modern" : "90's"}]
+        [retro]
       </button>
     </div>
   );
