@@ -11,7 +11,6 @@ The contact form saves submissions to Supabase. To enable:
    - `last_name` (text)
    - `email` (text)
    - `phone` (text, nullable)
-   - `country_code` (text, default: 'AU')
    - `company` (text, nullable)
    - `message` (text)
    - `created_at` (timestamptz, default: now())

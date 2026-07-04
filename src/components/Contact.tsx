@@ -7,7 +7,6 @@ type FormState = {
   lastName: string;
   email: string;
   phone: string;
-  country: string;
   company: string;
   message: string;
 };
@@ -20,7 +19,6 @@ export default function Contact() {
     lastName: "",
     email: "",
     phone: "",
-    country: "AU",
     company: "",
     message: "",
   });
@@ -47,7 +45,7 @@ export default function Contact() {
       }
 
       setStatus("sent");
-      setForm({ firstName: "", lastName: "", email: "", phone: "", country: "AU", company: "", message: "" });
+      setForm({ firstName: "", lastName: "", email: "", phone: "", company: "", message: "" });
     } catch (err) {
       console.error(err);
       setStatus("error");
@@ -165,69 +163,25 @@ export default function Contact() {
                     }}
                   />
                 </div>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  <div>
-                    <label className="block text-xs mb-1.5" style={{ color: "var(--text-secondary)" }}>
-                      Country
-                    </label>
-                    <select
-                      value={form.country}
-                      onChange={(e) => setForm(f => ({ ...f, country: e.target.value }))}
-                      style={{
-                        width: "100%",
-                        backgroundColor: "var(--bg-secondary)",
-                        border: "1px solid var(--border)",
-                        color: "var(--text-primary)",
-                        borderRadius: "0.5rem",
-                        padding: "0.75rem",
-                        fontSize: "0.875rem",
-                        cursor: "pointer",
-                      }}
-                    >
-                      <option value="AU">Australia</option>
-                      <option value="NZ">New Zealand</option>
-                      <option value="US">United States</option>
-                      <option value="CA">Canada</option>
-                      <option value="GB">United Kingdom</option>
-                      <option value="IE">Ireland</option>
-                      <option value="DE">Germany</option>
-                      <option value="FR">France</option>
-                      <option value="NL">Netherlands</option>
-                      <option value="BE">Belgium</option>
-                      <option value="CH">Switzerland</option>
-                      <option value="AT">Austria</option>
-                      <option value="SE">Sweden</option>
-                      <option value="NO">Norway</option>
-                      <option value="DK">Denmark</option>
-                      <option value="JP">Japan</option>
-                      <option value="SG">Singapore</option>
-                      <option value="HK">Hong Kong</option>
-                      <option value="IN">India</option>
-                      <option value="BR">Brazil</option>
-                      <option value="ZA">South Africa</option>
-                      <option value="XX">Other</option>
-                    </select>
-                  </div>
-                  <div className="sm:col-span-2">
-                    <label className="block text-xs mb-1.5" style={{ color: "var(--text-secondary)" }}>
-                      Phone
-                    </label>
-                    <input
-                      type="tel"
-                      value={form.phone}
-                      onChange={set("phone")}
-                      placeholder="0412 345 678 (optional)"
-                      style={{
-                        width: "100%",
-                        backgroundColor: "var(--bg-secondary)",
-                        border: "1px solid var(--border)",
-                        color: "var(--text-primary)",
-                        borderRadius: "0.5rem",
-                        padding: "0.75rem",
-                        fontSize: "0.875rem",
-                      }}
-                    />
-                  </div>
+                <div>
+                  <label className="block text-xs mb-1.5" style={{ color: "var(--text-secondary)" }}>
+                    Phone
+                  </label>
+                  <input
+                    type="tel"
+                    value={form.phone}
+                    onChange={set("phone")}
+                    placeholder="0412 345 678 (optional)"
+                    style={{
+                      width: "100%",
+                      backgroundColor: "var(--bg-secondary)",
+                      border: "1px solid var(--border)",
+                      color: "var(--text-primary)",
+                      borderRadius: "0.5rem",
+                      padding: "0.75rem",
+                      fontSize: "0.875rem",
+                    }}
+                  />
                 </div>
                 <div>
                   <label className="block text-xs mb-1.5" style={{ color: "var(--text-secondary)" }}>

@@ -7,7 +7,7 @@ const supabase = createClient(
 
 export async function POST(req: Request) {
   try {
-    const { firstName, lastName, email, phone, country, company, message } = await req.json();
+    const { firstName, lastName, email, phone, company, message } = await req.json();
 
     if (!firstName || !lastName || !email || !message) {
       return Response.json({ error: "Missing required fields" }, { status: 400 });
@@ -19,7 +19,6 @@ export async function POST(req: Request) {
         last_name: lastName,
         email,
         phone: phone || null,
-        country_code: country || "AU",
         company: company || null,
         message,
         created_at: new Date().toISOString(),
