@@ -69,11 +69,13 @@ export default function ThemeToggle() {
       {/* Light/Dark Toggle */}
       <button
         onClick={toggleTheme}
-        className="flex items-center gap-2 px-3 py-2 rounded-lg transition-colors text-sm"
+        className="flex items-center gap-2 transition-colors text-sm"
         style={{
           backgroundColor: "var(--bg-secondary)",
           border: "1px solid var(--border)",
           color: "var(--text-secondary)",
+          padding: "6px 12px",
+          borderRadius: "4px",
         }}
         aria-label="Toggle light/dark mode"
       >
@@ -92,17 +94,20 @@ export default function ThemeToggle() {
       {/* Modern/90's Toggle */}
       <button
         onClick={toggleRetro}
-        className="flex items-center gap-2 px-3 py-2 transition-colors text-sm"
+        className="text-sm transition-colors"
         style={{
-          backgroundColor: isRetro ? "#c0c0c0" : "var(--bg-secondary)",
-          border: isRetro ? "2px solid #808080" : "1px solid var(--border)",
-          color: isRetro ? "#000000" : "var(--text-secondary)",
-          fontFamily: isRetro ? "Times New Roman, serif" : "inherit",
-          textDecoration: isRetro ? "underline" : "none",
+          background: "none",
+          border: "none",
+          color: "#0000ff",
+          textDecoration: "underline",
+          padding: 0,
+          cursor: "pointer",
+          fontFamily: "Times New Roman, serif",
+          fontSize: "13px",
         }}
         aria-label="Toggle modern/90s mode"
       >
-        <span>{isRetro ? "90's" : "modern"}</span>
+        [{isRetro ? "modern" : "90's"}]
       </button>
     </div>
   );

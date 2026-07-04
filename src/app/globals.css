@@ -50,27 +50,137 @@ body {
 
 /* 90's Retro Mode */
 html.retro {
-  --bg-primary: #c0c0c0;
-  --bg-secondary: #dfdfdf;
-  --bg-tertiary: #efefef;
-  --text-primary: #000000;
-  --text-secondary: #000080;
-  --text-tertiary: #808080;
-  --accent: #ff0000;
-  --accent-dark: #cc0000;
-  --border: #808080;
-  --border-light: #c0c0c0;
+  font-family: "Times New Roman", serif;
+  font-size: 13px;
 }
 
-html.retro {
-  font-family: "Times New Roman", serif;
+html.retro * {
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
 
 html.retro a {
   color: #0000ff;
   text-decoration: underline;
+  background: none !important;
+  padding: 0 !important;
+  border: none !important;
 }
 
+html.retro button {
+  background: none !important;
+  border: none !important;
+  color: #0000ff;
+  text-decoration: underline;
+  font-family: "Times New Roman", serif;
+  font-size: 13px;
+  padding: 0 !important;
+  cursor: pointer;
+}
+
+html.retro [class*="py-"] {
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+}
+
+html.retro [class*="px-"] {
+  padding-left: 2px !important;
+  padding-right: 2px !important;
+}
+
+html.retro [class*="gap-"] {
+  gap: 2px !important;
+}
+
+html.retro [class*="mb-"],
+html.retro [class*="mt-"] {
+  margin-bottom: 2px !important;
+  margin-top: 2px !important;
+}
+
+html.retro section {
+  padding: 4px !important;
+}
+
+html.retro h1 {
+  font-size: 18px !important;
+  margin: 2px 0 !important;
+}
+
+html.retro h2 {
+  font-size: 16px !important;
+  margin: 2px 0 !important;
+}
+
+html.retro h3 {
+  font-size: 14px !important;
+  margin: 2px 0 !important;
+}
+
+html.retro p {
+  margin: 2px 0 !important;
+  line-height: 1.3 !important;
+}
+
+/* 90's Sidebar Layout */
 html.retro body {
+  display: flex !important;
+  flex-direction: row !important;
+  gap: 0 !important;
+}
+
+html.retro main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 100%;
+}
+
+html.retro section {
   border: 1px solid #808080;
+  padding: 4px !important;
+  margin: 4px !important;
+}
+
+html.retro .retro-sidebar {
+  display: block !important;
+  width: 150px;
+  border-right: 1px solid #808080;
+  padding: 4px;
+  min-height: 100vh;
+  flex-shrink: 0;
+}
+
+html.retro .retro-sidebar a {
+  display: block;
+  padding: 2px 0;
+  color: #0000ff;
+  text-decoration: underline;
+  font-size: 12px;
+}
+
+/* Blog-style cards */
+html.retro [class*="grid"] {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+}
+
+html.retro [class*="bg-slate"],
+html.retro [class*="border"],
+html.retro [class*="rounded"] {
+  border-radius: 0 !important;
+  background: none !important;
+  border: 1px solid #808080 !important;
+}
+
+html.retro h3 {
+  border-bottom: 1px solid #808080;
+  padding-bottom: 2px;
+}
+
+html.retro .group {
+  border: 1px solid #808080 !important;
+  padding: 4px !important;
+  margin: 2px 0 !important;
 }
