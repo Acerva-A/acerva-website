@@ -34,7 +34,7 @@ export default function Nav() {
           <a
             href="#"
             className="font-semibold text-base tracking-widest uppercase"
-            style={{ color: "var(--text-primary)" }}
+            style={{ color: isScrolled ? "#f1f5f3" : "var(--text-primary)" }}
           >
             Acerva
           </a>
@@ -45,7 +45,7 @@ export default function Nav() {
                 key={l.href}
                 href={l.href}
                 className="text-sm transition-colors duration-200 hover:opacity-80"
-                style={{ color: "var(--text-secondary)" }}
+                style={{ color: isScrolled ? "#e8eae7" : "var(--text-secondary)" }}
               >
                 {l.label}
               </a>
@@ -57,8 +57,9 @@ export default function Nav() {
               href="#contact"
               className="text-sm font-medium px-5 py-2 rounded-lg transition-colors duration-200"
               style={{
-                backgroundColor: "var(--accent)",
+                backgroundColor: isScrolled ? "var(--accent)" : "var(--accent)",
                 color: "#1b3a2b",
+                opacity: isScrolled ? 1 : 1,
               }}
             >
               Get in touch
@@ -69,7 +70,7 @@ export default function Nav() {
             className="md:hidden p-1 transition-colors"
             onClick={() => setIsOpen((o) => !o)}
             aria-label="Toggle menu"
-            style={{ color: "var(--text-secondary)" }}
+            style={{ color: isScrolled ? "#e8eae7" : "var(--text-secondary)" }}
           >
             {isOpen ? (
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
