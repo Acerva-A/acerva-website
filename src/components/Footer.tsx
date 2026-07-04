@@ -7,34 +7,32 @@ const footerLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-950 border-t border-slate-800/60">
+    <footer style={{ backgroundColor: "var(--bg-primary)", borderTop: "1px solid var(--border)" }}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
-          {/* Brand */}
           <div className="text-center sm:text-left">
-            <span className="text-white font-semibold text-sm tracking-widest uppercase">
+            <span className="font-semibold text-sm tracking-widest uppercase" style={{ color: "var(--text-primary)" }}>
               Acerva
             </span>
-            <p className="text-slate-600 text-xs mt-1">
+            <p className="text-xs mt-1" style={{ color: "var(--text-tertiary)" }}>
               Melbourne, VIC, Australia
             </p>
           </div>
 
-          {/* Nav links */}
           <nav className="flex items-center gap-6">
             {footerLinks.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
-                className="text-slate-500 hover:text-slate-300 text-sm transition-colors duration-200"
+                className="text-sm transition-colors duration-200 hover:opacity-80"
+                style={{ color: "var(--text-tertiary)" }}
               >
                 {l.label}
               </a>
             ))}
           </nav>
 
-          {/* Copyright */}
-          <p className="text-slate-600 text-xs">
+          <p className="text-xs" style={{ color: "var(--text-tertiary)" }}>
             © {new Date().getFullYear()} Acerva. All rights reserved.
           </p>
         </div>
