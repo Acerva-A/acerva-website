@@ -206,7 +206,7 @@ html.retro button[aria-label="Back to modern"] {
   text-decoration: none !important;
   padding: 6px 12px !important;
   border-radius: 4px !important;
-  font-family: inherit !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
   font-size: 12px !important;
   font-weight: 500 !important;
   cursor: pointer !important;
@@ -217,19 +217,16 @@ html.retro button[aria-label="Back to modern"]:hover {
   opacity: 0.8 !important;
 }
 
-/* Retro button looks retro in modern mode */
+/* Retro button looks retro in modern mode - just hyperlink style */
 button[aria-label="Try 90's mode"] {
   background: none !important;
-  border: 1px solid #808080 !important;
-  color: #000000 !important;
-  padding: 4px 8px !important;
+  border: none !important;
+  color: #0000ff !important;
+  padding: 0 !important;
   font-family: "Times New Roman", serif !important;
-  font-size: 12px !important;
+  font-size: 13px !important;
   text-decoration: underline !important;
-}
-
-button[aria-label="Try 90's mode"]:hover {
-  background: #c0c0c0 !important;
+  cursor: pointer !important;
 }
 
 html.retro main {
