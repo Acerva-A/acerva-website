@@ -146,10 +146,12 @@ html.retro header > a {
   text-decoration: none !important;
 }
 
-html.retro header nav {
+html.retro header nav,
+html.retro header nav.hidden {
   display: flex !important;
   flex-direction: column !important;
   gap: 2px !important;
+  width: 100% !important;
 }
 
 html.retro header nav a {
