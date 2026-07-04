@@ -29,13 +29,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geist.variable} h-full antialiased`}>
       <body className="min-h-full" style={{ backgroundColor: "var(--bg-primary)", color: "var(--text-primary)" }}>
-        <div className="retro-sidebar" style={{ display: "none" }}>
-          <div style={{ fontWeight: "bold", marginBottom: "8px", fontSize: "12px" }}>Navigation</div>
-          <a href="#services">Services</a>
-          <a href="#work">Work</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </div>
         {children}
         <ThemeToggle />
       </body>
