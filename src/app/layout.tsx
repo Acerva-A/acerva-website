@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
-import "react-flags-select/css/react-flags-select.css";
 import ThemeToggle from "@/components/ThemeToggle";
 
 const geist = Geist({

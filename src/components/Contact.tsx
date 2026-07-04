@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import ReactFlagsSelect from "react-flags-select";
 
 type FormState = {
   firstName: string;
@@ -171,14 +170,43 @@ export default function Contact() {
                     <label className="block text-xs mb-1.5" style={{ color: "var(--text-secondary)" }}>
                       Country
                     </label>
-                    <div style={{ position: "relative", zIndex: 10 }}>
-                      <ReactFlagsSelect
-                        selected={form.country}
-                        onSelect={(code) => setForm(f => ({ ...f, country: code }))}
-                        searchable
-                        showSelectedLabel={false}
-                      />
-                    </div>
+                    <select
+                      value={form.country}
+                      onChange={(e) => setForm(f => ({ ...f, country: e.target.value }))}
+                      style={{
+                        width: "100%",
+                        backgroundColor: "var(--bg-secondary)",
+                        border: "1px solid var(--border)",
+                        color: "var(--text-primary)",
+                        borderRadius: "0.5rem",
+                        padding: "0.75rem",
+                        fontSize: "0.875rem",
+                        cursor: "pointer",
+                      }}
+                    >
+                      <option value="AU">Australia</option>
+                      <option value="NZ">New Zealand</option>
+                      <option value="US">United States</option>
+                      <option value="CA">Canada</option>
+                      <option value="GB">United Kingdom</option>
+                      <option value="IE">Ireland</option>
+                      <option value="DE">Germany</option>
+                      <option value="FR">France</option>
+                      <option value="NL">Netherlands</option>
+                      <option value="BE">Belgium</option>
+                      <option value="CH">Switzerland</option>
+                      <option value="AT">Austria</option>
+                      <option value="SE">Sweden</option>
+                      <option value="NO">Norway</option>
+                      <option value="DK">Denmark</option>
+                      <option value="JP">Japan</option>
+                      <option value="SG">Singapore</option>
+                      <option value="HK">Hong Kong</option>
+                      <option value="IN">India</option>
+                      <option value="BR">Brazil</option>
+                      <option value="ZA">South Africa</option>
+                      <option value="XX">Other</option>
+                    </select>
                   </div>
                   <div className="sm:col-span-2">
                     <label className="block text-xs mb-1.5" style={{ color: "var(--text-secondary)" }}>
