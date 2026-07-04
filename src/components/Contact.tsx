@@ -112,7 +112,7 @@ export default function Contact() {
                       required
                       value={form.firstName}
                       onChange={set("firstName")}
-                      placeholder="John"
+                      placeholder="Will"
                       style={{
                         width: "100%",
                         backgroundColor: "var(--bg-secondary)",
@@ -133,7 +133,7 @@ export default function Contact() {
                       required
                       value={form.lastName}
                       onChange={set("lastName")}
-                      placeholder="Doe"
+                      placeholder="Dewit"
                       style={{
                         width: "100%",
                         backgroundColor: "var(--bg-secondary)",
