@@ -22,12 +22,9 @@ export default function ThemeToggle() {
       applyTheme(prefersDark);
     }
 
-    // Check localStorage for retro mode
-    const storedRetro = localStorage.getItem("retro");
-    if (storedRetro === "true") {
-      setIsRetro(true);
-      applyRetro(true);
-    }
+    // Don't remember retro mode - always start in modern
+    setIsRetro(false);
+    applyRetro(false);
   }, []);
 
   const applyTheme = (dark: boolean) => {
@@ -59,7 +56,7 @@ export default function ThemeToggle() {
     const newRetro = !isRetro;
     setIsRetro(newRetro);
     applyRetro(newRetro);
-    localStorage.setItem("retro", newRetro ? "true" : "false");
+    // Don't persist retro mode - always reload to modern
   };
 
   if (!mounted) return null;
