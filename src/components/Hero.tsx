@@ -20,13 +20,13 @@ export default function Hero() {
         </div>
 
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-semibold tracking-tight mb-6 leading-[1.08]" style={{ color: "var(--text-primary)" }}>
-          Technical work,
+          Building tailored
           <br />
-          <span style={{ color: "var(--accent)" }}>done properly.</span>
+          <span style={{ color: "var(--accent)" }}>solutions</span> so you can do what you're good at.
         </h1>
 
         <p className="text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed" style={{ color: "var(--text-secondary)" }}>
-          We build websites, applications, and integrations for businesses that want their technology to perform.
+          Custom systems and integrations for teams that need solid technical foundations. So you can focus on your business.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

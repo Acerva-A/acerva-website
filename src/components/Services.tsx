@@ -6,7 +6,7 @@ const services = [
       </svg>
     ),
     title: "Web & App Development",
-    description: "Custom websites and web applications built with modern frameworks. Fast, accessible, and designed to convert visitors into clients.",
+    description: "Custom websites and applications built to work. Fast, accessible, and designed to bring in customers. So you can focus on what matters.",
     tags: ["Next.js", "React", "TypeScript", "Tailwind"],
   },
   {
@@ -16,7 +16,7 @@ const services = [
       </svg>
     ),
     title: "System Integrations",
-    description: "Connecting your tools, APIs, and platforms so data flows where it needs to. Clean, reliable pipelines that keep your team moving.",
+    description: "Your tools should work together. We build clean, reliable integrations so data flows properly. Your team can actually scale.",
     tags: ["REST APIs", "Webhooks", "ETL", "Automation"],
   },
   {
@@ -26,7 +26,7 @@ const services = [
       </svg>
     ),
     title: "CRM & Automation",
-    description: "Salesforce orgs accumulate debt fast. Broken flows, duplicate fields, processes nobody owns. We audit what's there, fix what's not working, and build what's missing.",
+    description: "Your Salesforce should work for you, not against you. We fix broken processes, clean up data, and automate what slows you down. Your team moves faster.",
     tags: ["Salesforce", "Flows", "LWC", "Apex"],
   },
   {
@@ -35,8 +35,8 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
       </svg>
     ),
-    title: "Technical Consulting",
-    description: "Architecture reviews, tech stack decisions, and vendor evaluation. Practical guidance that helps you move forward with confidence.",
+    title: "Technical Strategy",
+    description: "Architecture reviews, tech stack decisions, vendor evaluation. Clear thinking on the decisions that matter. Without the consulting overhead.",
     tags: ["Strategy", "Architecture", "Review", "Vendor eval"],
   },
   {
@@ -46,7 +46,7 @@ const services = [
       </svg>
     ),
     title: "Data Remediation",
-    description: "Duplicate records, broken field mappings, legacy imports gone wrong. We identify what's causing problems in your data, clean it up, and put the guardrails in place to keep it that way.",
+    description: "Bad data slows you down. We identify what's broken, fix it properly, and put guardrails in place. Your systems stay reliable and work properly.",
     tags: ["Deduplication", "Data Quality", "Migration", "Salesforce"],
   },
   {
@@ -56,7 +56,7 @@ const services = [
       </svg>
     ),
     title: "Quick Fixes",
-    description: "Sometimes the problem is small and you just need it sorted. A broken form, a Salesforce field misbehaving, a script that needs tweaking. We take on scoped one-off engagements and turn them around fast.",
+    description: "Smaller problems need solving too. A broken form, a misconfigured field, a script that needs tweaking. Fast turnaround on scoped work.",
     tags: ["Ad Hoc", "One-off", "Small scope"],
     cta: { label: "Send us the details", href: "#contact" },
   },

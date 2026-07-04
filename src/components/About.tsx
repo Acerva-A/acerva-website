@@ -1,18 +1,18 @@
 const steps = [
   {
     num: "01",
-    title: "Understand first",
-    desc: "Every engagement starts with a clear brief. We listen before we build.",
+    title: "Understand your business",
+    desc: "We start by understanding what you do, how you do it, and what's in the way. Not just the tech.",
   },
   {
     num: "02",
-    title: "Right tool for the job",
-    desc: "Technology chosen for fit and longevity. We recommend what works for your situation.",
+    title: "Build the right foundation",
+    desc: "We architect and build systems that fit your business. Built to last. Easy to work with.",
   },
   {
     num: "03",
-    title: "Deliver, then improve",
-    desc: "Ship working software early. Iterate based on real feedback. Keep improving.",
+    title: "You do what you're good at",
+    desc: "Once the foundation is solid, it stops being a problem. Your team can focus on the work that matters.",
   },
 ];
 
@@ -33,17 +33,17 @@ export default function About() {
               Who we are
             </p>
             <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-6" style={{ color: "var(--text-primary)" }}>
-              Building real things for real businesses
+              Who we are
             </h2>
             <div className="space-y-4 text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
               <p>
-                Acerva is a Melbourne-based technical services firm. We bring genuine technical expertise to every engagement, from the first conversation through to delivery.
+                Acerva is a Melbourne-based technical services firm. We work with teams that need solid technical foundations.
               </p>
               <p>
-                We build, integrate, and advise. Whether you&apos;re starting from scratch, modernising existing systems, or connecting the tools you already have, we find the right path and deliver it properly.
+                Whether you're building from scratch, modernising existing systems, or connecting the tools you have, we handle the technical work so you can focus on your business. Web development, integrations, CRM, automation. Whatever you need.
               </p>
               <p>
-                Our work spans custom web development, CRM implementations, API integrations, and technical strategy. Often across all four at once.
+                We work with teams that care about quality and know what they're doing. No jargon. No bloat. Just solid engineering.
               </p>
             </div>
 

@@ -2,19 +2,19 @@ const projects = [
   {
     category: "Web Development",
     title: "Trade Services Website Rebuild",
-    description: "Full redesign and rebuild of a Melbourne-based trade services business. Mobile-first, fast-loading, with integrated quote request and lead capture.",
+    description: "A Melbourne trade business needed a site that brought in customers. We rebuilt their web presence with new business inquiries built in. Freed them to focus on the work.",
     tags: ["Next.js", "Tailwind", "Vercel"],
   },
   {
     category: "CRM Integration",
-    title: "Salesforce API Integration Suite",
-    description: "Multi-system sync between Salesforce, a quoting platform, and an accounting tool. Eliminated manual data re-entry across three teams.",
+    title: "Salesforce & Accounting Integration",
+    description: "Three teams wasting time manually re-entering data across systems. We built a sync between Salesforce, quoting, and accounting. Stopped the waste.",
     tags: ["Salesforce", "REST API", "Automation"],
   },
   {
     category: "Workflow Automation",
-    title: "Client Onboarding Workflow",
-    description: "End-to-end onboarding automation for a professional services firm. Reduced admin time significantly across the entire intake process.",
+    title: "Professional Services Onboarding",
+    description: "Client intake was eating admin time. We built an automated workflow that handles the process. Team focuses on delivering the work.",
     tags: ["Flows", "Webhooks", "Forms"],
   },
 ];
