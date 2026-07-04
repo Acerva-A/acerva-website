@@ -47,3 +47,30 @@ body {
   color: var(--text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* 90's Retro Mode */
+html.retro {
+  --bg-primary: #c0c0c0;
+  --bg-secondary: #dfdfdf;
+  --bg-tertiary: #efefef;
+  --text-primary: #000000;
+  --text-secondary: #000080;
+  --text-tertiary: #808080;
+  --accent: #ff0000;
+  --accent-dark: #cc0000;
+  --border: #808080;
+  --border-light: #c0c0c0;
+}
+
+html.retro {
+  font-family: "Times New Roman", serif;
+}
+
+html.retro a {
+  color: #0000ff;
+  text-decoration: underline;
+}
+
+html.retro body {
+  border: 1px solid #808080;
+}

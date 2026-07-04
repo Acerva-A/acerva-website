@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const links = [
   { href: "#services", label: "Services" },
@@ -52,14 +53,14 @@ export default function Nav() {
             ))}
           </nav>
 
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center gap-4">
+            <ThemeToggle />
             <a
               href="#contact"
               className="text-sm font-medium px-5 py-2 rounded-lg transition-colors duration-200"
               style={{
-                backgroundColor: isScrolled ? "var(--accent)" : "var(--accent)",
+                backgroundColor: "var(--accent)",
                 color: "#1b3a2b",
-                opacity: isScrolled ? 1 : 1,
               }}
             >
               Get in touch
