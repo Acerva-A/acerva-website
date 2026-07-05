@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import ThemeToggle from "@/components/ThemeToggle";
 
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body className="min-h-full" style={{ backgroundColor: "var(--bg-primary)", color: "var(--text-primary)" }}>
         {children}
         <ThemeToggle />
+        <Analytics />
       </body>
     </html>
   );
