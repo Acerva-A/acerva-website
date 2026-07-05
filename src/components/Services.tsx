@@ -25,9 +25,9 @@ const services = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
       </svg>
     ),
-    title: "CRM & Automation",
-    description: "Your Salesforce should work for you, not against you. We fix broken processes, clean up data, and automate what slows you down. Your team moves faster.",
-    tags: ["Salesforce", "Flows", "LWC", "Apex"],
+    title: "Salesforce Solutions",
+    description: "Salesforce is powerful but easy to get tangled. We fix it, build clean solutions that work, automate the tedious stuff, and help get your team actually using it.",
+    tags: ["Salesforce", "Flows", "LWC", "Apex", "Custom Dev"],
   },
   {
     icon: (
