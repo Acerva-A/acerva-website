@@ -46,7 +46,7 @@ export default function Hero() {
 
         <button
           onClick={() => window.scrollBy({ top: 400, behavior: "smooth" })}
-          className="mt-24 flex flex-col items-center gap-2 cursor-pointer transition-colors duration-200 hover:opacity-70"
+          className="mt-24 flex flex-col items-center gap-2 cursor-pointer transition-colors duration-200 hover:opacity-70 mx-auto"
           style={{ color: "var(--text-tertiary)" }}
           aria-label="Scroll down"
         >
